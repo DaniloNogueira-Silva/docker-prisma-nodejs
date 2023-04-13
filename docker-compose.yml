@@ -5,13 +5,13 @@ services:
     image: postgres:alpine
     ports:
       - "5432:5432"
-    container_name: "db-postgres-evento"
+    container_name: "db-postgres-node"
     restart: always
     volumes:
-      - ./banco-de-dados-evento-api:/var/lib/postgresql/data
+      - ./banco-de-dados-api:/var/lib/postgresql/data
     environment:
-      POSTGRES_USER: pguser
-      POSTGRES_PASSWORD: pgpassword
+      POSTGRES_USER: user
+      POSTGRES_PASSWORD: 1234
 
 volumes:
-  banco-de-dados-evento-api:
+  banco-de-dados-api:
